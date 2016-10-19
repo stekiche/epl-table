@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+  head
+    title EPL Standings
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel="stylesheet" href="styles.css")
+    link(rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css")
+    //Load libraries
+       //polyfills for older browsers
+    script(src='lib/core-js/client/shim.min.js')
+    script(src='lib/zone.js/dist/zone.js')
+    script(src='lib/reflect-metadata/Reflect.js')
+    script(src='lib/systemjs/dist/system.src.js')
+    //Configure SystemJS
+    script(src='systemjs.config.js')
+    script.
+      System.import('app').catch(function(err){ console.error(err); });
+
+  //Display app
+  body
+    my-app Loading
+
