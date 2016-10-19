@@ -15,7 +15,7 @@ gulp.task('browser-sync', function () {
 
    browserSync.init(files, {
       server: {
-         baseDir: './dist'
+         baseDir: './'
       }
    });
 });
@@ -26,14 +26,14 @@ gulp.task('pug-to-html', () => {
         .pipe(pug({
             pretty: true
         }))
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./'));
 });
 
 // Transpile .ts to .js and store resulting files in dist/js/
 gulp.task('typescript', () => {
     return gulp.src('./app/**/*.ts')
         .pipe(ts())
-        .pipe(gulp.dest('dist/js/'));
+        .pipe(gulp.dest('app/'));
 });
 
 // Watch TypeScript and Pug files for changes
@@ -43,4 +43,4 @@ gulp.task('watch', () => {
 });
 
 // Default task `gulp`
-gulp.task('default', ['watch', 'browser-sync']);
+gulp.task('default', ['pug-to-html', 'typescript', 'watch', 'browser-sync']);

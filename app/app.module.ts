@@ -1,5 +1,12 @@
-let a: boolean = false;
-let d: boolean = true;
+import { NgModule }      from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
+import { AppComponent }   from './app.component';
 
-let b = "string";
+@NgModule({
+  imports:      [ BrowserModule ],
+  declarations: [ AppComponent ],
+  bootstrap:    [ AppComponent ]
+})
+
+export class AppModule { }
