@@ -9,6 +9,13 @@ h2, h3 {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
 }
+
+my-app div {
+	background-color: #2a2a2a;
+	color: #369;
+  	font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
-  margin: 2em;
+	background-color: #2a2a2a;
 }

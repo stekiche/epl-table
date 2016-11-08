@@ -1,0 +1,5 @@
+div(*ngIf="team")
+	h2 {{team.name}}
+	img(src="{{team.crestUrl}}")
+	p Market Value = {{team.squadMarketValue}}
+	button((click)="goBack()") Back

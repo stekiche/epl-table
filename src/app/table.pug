@@ -7,17 +7,26 @@ div
 			tr 
 				th Rank
 				th Team
-				th Played
 				th Points
+				th Played
+				th Won
+				th Drawn
+				th Lost
 				th GF
 				th GA
 				th GD
-			tr(*ngFor="let stand of table.standing; let i = index;")
-				td {{i+1}}
+			tr(*ngFor="let stand of table.standing", (click)="gotoDetail(stand)")
+				td {{stand.position}}
 				td 
 					img(src="{{stand.crestURI}}")
-				td {{stand.playedGames}}
 				td {{stand.points}}
+				td {{stand.playedGames}}
+				td {{stand.wins}}
+				td {{stand.draws}}
+				td {{stand.losses}}
 				td {{stand.goals}}
 				td {{stand.goalsAgainst}}
 				td {{stand.goalDifference}}
+
+		//my-team([team]="selectedTeam")
+
